@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Teste de usuários</title>
     <style>
         p#p1 {
             color: white;    
@@ -27,30 +28,13 @@
                         <p class="card-text">{{ user.email }}</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" v-for="(user, index) in users" :key="index">
-                <div class="card m-3">
-                    <img :src="user.avatar" class="card-img-top" alt="Imagem do usuário">
-                    <div class="card-body p-2">
-                        <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
-                        <p class="card-text">{{ user.email }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" v-for="(user, index) in users" :key="index">
-                <div class="card m-3">
-                    <img :src="user.avatar" class="card-img-top" alt="Imagem do usuário">
-                    <div class="card-body p-2">
-                        <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
-                        <p class="card-text">{{ user.email }}</p>   
-                    </div>
-                </div>
-            </div>
+            </div> 
             <!-- Painel de usuário -->
+        </div>
     </div>
     
     
-    <script src="https://cdn.jsdelivr.net/npm/vue@2">
+    <script>
         const app = new Vue({
             el:'#usuarios',
             data() {
